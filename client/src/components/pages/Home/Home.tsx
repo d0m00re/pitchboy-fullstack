@@ -25,8 +25,6 @@ function Home({}: Props) {
 const [listMoovie, setListMoovie] = useState<entitiesMoovie.IListMoovie>(entitiesMoovie.makeEmpty());
 
     useEffect(() => {
-      // init and populate - gfetch here
-      
       setListMoovie(old => ({...old, moovies : fetchData(0)}));
     }, [])
     

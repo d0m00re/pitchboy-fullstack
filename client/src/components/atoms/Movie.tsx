@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import Typography from "@mui/material/Typography";
 import IconButton from "@mui/material/IconButton";
 import DeleteIcon from '@mui/icons-material/Delete';
@@ -9,18 +9,18 @@ import * as entitiesMovie from "../entity/movie.entity";//"./../../entity/moovie
 
 
 type Props = {
-    movie : entitiesMovie.IMoovieElem
+    movie: entitiesMovie.IMoovieElem
 }
 
 function Movie(props: Props) {
     const [notation, setNotation] = useState(0);
 
-  return (
-    <Card sx={{minWidth : 275, maxWidth : 300}}>
+    return (
+        <Card sx={{ minWidth: 275, maxWidth: 300 }}>
             <CardContent>
                 <IconButton
-                    onClick={() => {}}
-                    aria-label="delete">
+                    onClick={() => { }}
+                    aria-label="star">
                     <DeleteIcon />
                 </IconButton>
                 <Typography variant="h5" component="h2">
@@ -41,7 +41,7 @@ function Movie(props: Props) {
                 </Typography>
             </CardContent>
         </Card>
-  )
+    )
 }
 
 export default Movie
