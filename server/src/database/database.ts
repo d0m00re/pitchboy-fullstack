@@ -25,8 +25,8 @@ class DbCities {
     }
 
     findCitiesWithCommuneCode(communeCode : string) {
-        let i = this.cities.findIndex(city => city.fields.nom_de_la_commune === communeCode);
-        return (i === -1) ? undefined : this.cities[i];
+        let listCities = this.cities.filter(city => city.fields.code_commune_insee === communeCode);
+        return (listCities === undefined) ? undefined : listCities;
     }
 
     /*
