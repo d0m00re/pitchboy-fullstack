@@ -57,7 +57,6 @@ export const ZodPaginateOutput = z.object({
 
 export const ZodNearCity = z.object({
     p1 : ZodCoordinate,
-    p2 : ZodCoordinate,
     maxDistance : z.number()
 })
 

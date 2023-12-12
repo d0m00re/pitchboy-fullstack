@@ -29,11 +29,18 @@ class DbCities {
         return (listCities === undefined) ? undefined : listCities;
     }
 
-    /*
+    
     findNearCity(props : entityCities.INearCity) {
-        let allCity = this.cities.filter(city => calculDistance(props.p1, city.fields.coordonnees_gps, distance) < km)
+        let p1 = {lat : props.p1[0], lng : props.p1[1]};
+        let allCity = this.cities.filter(city => calculDistance(
+            p1,
+            {
+                lat : city.geometry.coordinates[0],
+                lng : city.geometry.coordinates[1]
+            }) < props.maxDistance);
+
+        return allCity;
     }
-    */
 
     patchOne(city : Partial<entityCities.ICity>) {
         let index = this.cities.findIndex(_city => _city.recordid === city.recordid);
