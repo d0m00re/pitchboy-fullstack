@@ -1,0 +1,264 @@
+[
+    {
+      "datasetid": "laposte_hexasmal",
+      "recordid": "2f5748b16302756ae4b4882e69cd2e057b44599d",
+      "fields": {
+        "nom_de_la_commune": "VILLE DU PONT",
+        "libelle_d_acheminement": "VILLE DU PONT",
+        "code_postal": "25650",
+        "coordonnees_gps": [46.999873398, 6.498147193],
+        "code_commune_insee": "25620"
+      },
+      "geometry": { "type": "Point", "coordinates": [6.498147193, 46.999873398] },
+      "record_timestamp": "2022-03-21T00:35:00+01:00"
+    },
+    {
+      "datasetid": "laposte_hexasmal",
+      "recordid": "473fe37ce19506e568b81e8d866adf1d59a3eb47",
+      "fields": {
+        "nom_de_la_commune": "VILLERS GRELOT",
+        "libelle_d_acheminement": "VILLERS GRELOT",
+        "code_postal": "25640",
+        "coordonnees_gps": [47.361512085, 6.235167025],
+        "code_commune_insee": "25624"
+      },
+      "geometry": { "type": "Point", "coordinates": [6.235167025, 47.361512085] },
+      "record_timestamp": "2022-03-21T00:35:00+01:00"
+    },
+    {
+      "datasetid": "laposte_hexasmal",
+      "recordid": "c28b96d8a21573bfd986d38cda0f0ec0bc036e2b",
+      "fields": {
+        "nom_de_la_commune": "SOLAURE EN DIOIS",
+        "libelle_d_acheminement": "SOLAURE EN DIOIS",
+        "code_postal": "26150",
+        "coordonnees_gps": [44.70587354, 5.387770455],
+        "code_commune_insee": "26001",
+        "ligne_5": "AIX EN DIOIS"
+      },
+      "geometry": { "type": "Point", "coordinates": [5.387770455, 44.70587354] },
+      "record_timestamp": "2022-03-21T00:35:00+01:00"
+    },
+    {
+      "datasetid": "laposte_hexasmal",
+      "recordid": "654c20426627c5760214400eef20dc3653228fe6",
+      "fields": {
+        "nom_de_la_commune": "ALEYRAC",
+        "libelle_d_acheminement": "ALEYRAC",
+        "code_postal": "26770",
+        "coordonnees_gps": [44.499150841, 4.946083614],
+        "code_commune_insee": "26003"
+      },
+      "geometry": { "type": "Point", "coordinates": [4.946083614, 44.499150841] },
+      "record_timestamp": "2022-03-21T00:35:00+01:00"
+    },
+    {
+      "datasetid": "laposte_hexasmal",
+      "recordid": "71a426d3fc2d9d5fae1ec421f116e391e74b0cb9",
+      "fields": {
+        "nom_de_la_commune": "ANDANCETTE",
+        "libelle_d_acheminement": "ANDANCETTE",
+        "code_postal": "26140",
+        "coordonnees_gps": [45.246625023, 4.812717032],
+        "code_commune_insee": "26009"
+      },
+      "geometry": { "type": "Point", "coordinates": [4.812717032, 45.246625023] },
+      "record_timestamp": "2022-03-21T00:35:00+01:00"
+    },
+    {
+      "datasetid": "laposte_hexasmal",
+      "recordid": "2964fc728ff4cbc67044ba2fe7b44951d702ba9a",
+      "fields": {
+        "nom_de_la_commune": "AOUSTE SUR SYE",
+        "libelle_d_acheminement": "AOUSTE SUR SYE",
+        "code_postal": "26400",
+        "coordonnees_gps": [44.706856708, 5.057320177],
+        "code_commune_insee": "26011"
+      },
+      "geometry": { "type": "Point", "coordinates": [5.057320177, 44.706856708] },
+      "record_timestamp": "2022-03-21T00:35:00+01:00"
+    },
+    {
+      "datasetid": "laposte_hexasmal",
+      "recordid": "f36faecb2a881e71e819e94aec34394076b5b039",
+      "fields": {
+        "nom_de_la_commune": "ARPAVON",
+        "libelle_d_acheminement": "ARPAVON",
+        "code_postal": "26110",
+        "coordonnees_gps": [44.371127022, 5.273184253],
+        "code_commune_insee": "26013"
+      },
+      "geometry": { "type": "Point", "coordinates": [5.273184253, 44.371127022] },
+      "record_timestamp": "2022-03-21T00:35:00+01:00"
+    },
+    {
+      "datasetid": "laposte_hexasmal",
+      "recordid": "cafca3044ec80f9b5d0060ce90cab000cfbcc445",
+      "fields": {
+        "nom_de_la_commune": "AUTICHAMP",
+        "libelle_d_acheminement": "AUTICHAMP",
+        "code_postal": "26400",
+        "coordonnees_gps": [44.683240066, 4.972677118],
+        "code_commune_insee": "26021"
+      },
+      "geometry": { "type": "Point", "coordinates": [4.972677118, 44.683240066] },
+      "record_timestamp": "2022-03-21T00:35:00+01:00"
+    },
+    {
+      "datasetid": "laposte_hexasmal",
+      "recordid": "dc62952c786378dde591ecc752bed1a1754b84ac",
+      "fields": {
+        "nom_de_la_commune": "BARCELONNE",
+        "libelle_d_acheminement": "BARCELONNE",
+        "code_postal": "26120",
+        "coordonnees_gps": [44.867074421, 5.054652574],
+        "code_commune_insee": "26024"
+      },
+      "geometry": { "type": "Point", "coordinates": [5.054652574, 44.867074421] },
+      "record_timestamp": "2022-03-21T00:35:00+01:00"
+    },
+    {
+      "datasetid": "laposte_hexasmal",
+      "recordid": "a9d3d734de5c52985a8516ee43a08609d17db9b8",
+      "fields": {
+        "nom_de_la_commune": "BARRET DE LIOURE",
+        "libelle_d_acheminement": "BARRET DE LIOURE",
+        "code_postal": "26570",
+        "coordonnees_gps": [44.175483103, 5.516253783],
+        "code_commune_insee": "26026"
+      },
+      "geometry": { "type": "Point", "coordinates": [5.516253783, 44.175483103] },
+      "record_timestamp": "2022-03-21T00:35:00+01:00"
+    },
+    {
+      "datasetid": "laposte_hexasmal",
+      "recordid": "e3516c75e527d0f5948a4234b39566c052d318b0",
+      "fields": {
+        "nom_de_la_commune": "BARSAC",
+        "libelle_d_acheminement": "BARSAC",
+        "code_postal": "26150",
+        "coordonnees_gps": [44.726373096, 5.304155411],
+        "code_commune_insee": "26027"
+      },
+      "geometry": { "type": "Point", "coordinates": [5.304155411, 44.726373096] },
+      "record_timestamp": "2022-03-21T00:35:00+01:00"
+    },
+    {
+      "datasetid": "laposte_hexasmal",
+      "recordid": "9c863ca22139727cb78a53771c997184c57411d1",
+      "fields": {
+        "nom_de_la_commune": "BATHERNAY",
+        "libelle_d_acheminement": "BATHERNAY",
+        "code_postal": "26260",
+        "coordonnees_gps": [45.183429046, 4.998168321],
+        "code_commune_insee": "26028"
+      },
+      "geometry": { "type": "Point", "coordinates": [4.998168321, 45.183429046] },
+      "record_timestamp": "2022-03-21T00:35:00+01:00"
+    },
+    {
+      "datasetid": "laposte_hexasmal",
+      "recordid": "8a28e70c5df9e207abecb0eac6266db7c51fcef6",
+      "fields": {
+        "nom_de_la_commune": "LA BAUME DE TRANSIT",
+        "libelle_d_acheminement": "LA BAUME DE TRANSIT",
+        "code_postal": "26790",
+        "coordonnees_gps": [44.327387474, 4.869450955],
+        "code_commune_insee": "26033"
+      },
+      "geometry": { "type": "Point", "coordinates": [4.869450955, 44.327387474] },
+      "record_timestamp": "2022-03-21T00:35:00+01:00"
+    },
+    {
+      "datasetid": "laposte_hexasmal",
+      "recordid": "ae0da695a416458d81f0ba515c6b40a6753db4eb",
+      "fields": {
+        "nom_de_la_commune": "BEAUMONT MONTEUX",
+        "libelle_d_acheminement": "BEAUMONT MONTEUX",
+        "code_postal": "26600",
+        "coordonnees_gps": [45.033176004, 4.921702639],
+        "code_commune_insee": "26038"
+      },
+      "geometry": { "type": "Point", "coordinates": [4.921702639, 45.033176004] },
+      "record_timestamp": "2022-03-21T00:35:00+01:00"
+    },
+    {
+      "datasetid": "laposte_hexasmal",
+      "recordid": "3a880cd9bfafdb92bf53e00f0d6386187758e691",
+      "fields": {
+        "nom_de_la_commune": "BEAURIERES",
+        "libelle_d_acheminement": "BEAURIERES",
+        "code_postal": "26310",
+        "coordonnees_gps": [44.560126656, 5.553853155],
+        "code_commune_insee": "26040"
+      },
+      "geometry": { "type": "Point", "coordinates": [5.553853155, 44.560126656] },
+      "record_timestamp": "2022-03-21T00:35:00+01:00"
+    },
+    {
+      "datasetid": "laposte_hexasmal",
+      "recordid": "0daa858557fd92df7b4e484b0858d8c0ad05eba2",
+      "fields": {
+        "nom_de_la_commune": "BEZAUDUN SUR BINE",
+        "libelle_d_acheminement": "BEZAUDUN SUR BINE",
+        "code_postal": "26460",
+        "coordonnees_gps": [44.611710841, 5.175449337],
+        "code_commune_insee": "26051"
+      },
+      "geometry": { "type": "Point", "coordinates": [5.175449337, 44.611710841] },
+      "record_timestamp": "2022-03-21T00:35:00+01:00"
+    },
+    {
+      "datasetid": "laposte_hexasmal",
+      "recordid": "4e25417ca2c1b8fe7a96dd2998b75138aafa7afa",
+      "fields": {
+        "nom_de_la_commune": "BOURDEAUX",
+        "libelle_d_acheminement": "BOURDEAUX",
+        "code_postal": "26460",
+        "coordonnees_gps": [44.57876787, 5.151124196],
+        "code_commune_insee": "26056"
+      },
+      "geometry": { "type": "Point", "coordinates": [5.151124196, 44.57876787] },
+      "record_timestamp": "2022-03-21T00:35:00+01:00"
+    },
+    {
+      "datasetid": "laposte_hexasmal",
+      "recordid": "5726d6afc5b0bf8ef848bb26fbe9cd948d2a5321",
+      "fields": {
+        "nom_de_la_commune": "BOUVIERES",
+        "libelle_d_acheminement": "BOUVIERES",
+        "code_postal": "26460",
+        "coordonnees_gps": [44.52091004, 5.221164785],
+        "code_commune_insee": "26060"
+      },
+      "geometry": { "type": "Point", "coordinates": [5.221164785, 44.52091004] },
+      "record_timestamp": "2022-03-21T00:35:00+01:00"
+    },
+    {
+      "datasetid": "laposte_hexasmal",
+      "recordid": "f0846857f836f2b6a33c1a33fb50dc34f6fbab5a",
+      "fields": {
+        "nom_de_la_commune": "CHABEUIL",
+        "libelle_d_acheminement": "CHABEUIL",
+        "code_postal": "26120",
+        "coordonnees_gps": [44.908639476, 5.007084576],
+        "code_commune_insee": "26064",
+        "ligne_5": "PARLANGES"
+      },
+      "geometry": { "type": "Point", "coordinates": [5.007084576, 44.908639476] },
+      "record_timestamp": "2022-03-21T00:35:00+01:00"
+    },
+    {
+      "datasetid": "laposte_hexasmal",
+      "recordid": "385469b728ab4668ab710450644260192c6c88be",
+      "fields": {
+        "nom_de_la_commune": "CHALANCON",
+        "libelle_d_acheminement": "CHALANCON",
+        "code_postal": "26470",
+        "coordonnees_gps": [44.5274038, 5.339272438],
+        "code_commune_insee": "26067"
+      },
+      "geometry": { "type": "Point", "coordinates": [5.339272438, 44.5274038] },
+      "record_timestamp": "2022-03-21T00:35:00+01:00"
+    }
+]
