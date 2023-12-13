@@ -9,7 +9,8 @@ import * as entitiesCities from "../../network/cities/cities.entities";//"./../.
 
 
 type Props = {
-    city: entitiesCities.ICity
+    city: entitiesCities.ICity,
+    deleteOne : (id : string) => void
 }
 
 function CardCity(props: Props) {
@@ -19,7 +20,7 @@ function CardCity(props: Props) {
         <Card sx={{ minWidth: 275, maxWidth: 300 }}>
             <CardContent>
                 <IconButton
-                    onClick={() => { }}
+                    onClick={() => {props.deleteOne(props.city.recordid)}}
                     aria-label="star">
                     <DeleteIcon />
                 </IconButton>

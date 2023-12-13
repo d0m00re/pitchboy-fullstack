@@ -43,7 +43,6 @@ const FormCreateCity = (props : IProjectForm) => {
 
   const handleChange = (event: any) => {
     const { id, value } = event.target;
-    console.log(`update : ${name} : ${value}`)
     let newData = { [id]: value };
 
     setFormData(prevData => {
@@ -84,11 +83,21 @@ const FormCreateCity = (props : IProjectForm) => {
       <Paper elevation={3} style={{padding : "10px"}}>
         <Typography variant="h4" style={{padding : "2px"}}>Create a city</Typography>
         <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: "5px" }}>
+        <FormGroup>
+            <InputLabel>Nom de la commune</InputLabel>
+            <TextField
+              id="nom_de_la_commune"
+              variant='filled'
+              value={formData.nom_de_la_commune}
+              onChange={handleChange}
+              required
+            />
+          </FormGroup>
+          
           <FormGroup>
-            <InputLabel>City Name</InputLabel>
+            <InputLabel>Code commune</InputLabel>
             <TextField
               id="code_commune_insee"
-              label="code_commune_insee"
               variant='filled'
               value={formData.code_commune_insee}
               onChange={handleChange}
@@ -109,27 +118,16 @@ const FormCreateCity = (props : IProjectForm) => {
           </FormGroup>
 
           <FormGroup>
+            <InputLabel>Libele d acheminement</InputLabel>
             <TextField
               id="libelle_d_acheminement"
-              label="libelle_d_acheminement"
               variant='filled'
               value={formData.libelle_d_acheminement}
               onChange={handleChange}
               required
             />
           </FormGroup>
-
-          <FormGroup>
-            <TextField
-              id="nom_de_la_commune"
-              label="nom_de_la_commune"
-              variant='filled'
-              value={formData.nom_de_la_commune}
-              onChange={handleChange}
-              required
-            />
-          </FormGroup>
-          <Button type="submit">Create</Button>
+          <Button type="submit">Creation</Button>
         </form>
       </Paper>
     </Container>

@@ -5,7 +5,8 @@ import Grid from "@mui/material/Grid";
 import Container from "@mui/material/Container";
 
 type Props = {
-  listCities: entitiesCities.ICities,
+  listCities: entitiesCities.ICities;
+  deleteOne : (id : string) => void;
 }
 
 function ListCities(props: Props) {
@@ -25,6 +26,7 @@ function ListCities(props: Props) {
             >
               <CardCity
                 city={city}
+                deleteOne={props.deleteOne}
               />
             </Grid>)
         }

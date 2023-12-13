@@ -8,9 +8,7 @@ import Box from '@mui/material/Box';
 import { Button } from '@mui/material';
 import ModalCreateCity from "./../../templates/ModalCreation/ModalCreateCity";
 
-type Props = {}
-
-function Home({ }: Props) {
+function Home() {
     const citiesStore = useCities();
     const [openModalCreateCity, setOpenModalCreateCity] = useState<boolean>(false);
     const onOpen = () => setOpenModalCreateCity(true);
@@ -32,6 +30,18 @@ function Home({ }: Props) {
             })
     }
 
+    function deleteOne(id : string) {
+        citiesNetwork.deleteOne(id)
+        .then(resp => {
+            console.log("success delete");
+            if (resp)
+                citiesStore.deleteOne(id);
+        })
+        .catch(err => {
+            console.log("fail delete one", err)
+        })
+    }
+
 
     return (
         <Box sx={{ display: 'flex', alignContent : "center", flexDirection : "column", margin : "18px", gap : "10px" }}>
@@ -44,6 +54,7 @@ function Home({ }: Props) {
             
             <ListCities
                 listCities={citiesStore.cities.rows}
+                deleteOne={deleteOne}
             />
             <Pagination
                 style={{margin : "auto"}}
