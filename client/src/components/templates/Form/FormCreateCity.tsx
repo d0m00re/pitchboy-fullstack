@@ -82,7 +82,7 @@ const FormCreateCity = (props : IProjectForm) => {
 
       <Paper elevation={3} style={{padding : "10px"}}>
         <Typography variant="h4" style={{padding : "2px"}}>Create a city</Typography>
-        <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: "5px" }}>
+        <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
         <FormGroup>
             <InputLabel>Nom de la commune</InputLabel>
             <TextField
@@ -109,7 +109,6 @@ const FormCreateCity = (props : IProjectForm) => {
             <InputLabel>Code postal</InputLabel>
             <TextField
               id="code_postal"
-              label="code_postal"
               variant='filled'
               value={formData.code_postal}
               onChange={handleChange}

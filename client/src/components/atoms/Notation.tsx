@@ -40,10 +40,14 @@ const notationElemArray : INotationElem[] = [{
 
 function Notation(props: Props) {
   return (
-    <div>
+    <div style={{display : "flex", justifyContent : "center", margin : "10px"}}>
         {
             notationElemArray.map((data, i) => <data.CpnIcon
-                style={{color : (props.notation === i) ? data.color : "grey"}}
+                fontSize='large'
+                style={{
+                    color : (props.notation === i) ? data.color : "grey",
+                    cursor : "pointer"
+                }}
                 onClick={() => {props.updateNotation(props.id, data.notation)}}
             />)
         }

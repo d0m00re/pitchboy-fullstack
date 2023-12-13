@@ -42,10 +42,9 @@ function Home() {
         })
     }
 
-
     return (
         <Box sx={{ display: 'flex', alignContent : "center", flexDirection : "column", margin : "18px", gap : "10px" }}>
-            <Button onClick={onOpen}>Create a project</Button>
+            <Button onClick={onOpen}>Create a city</Button>
             <ModalCreateCity
                 open={openModalCreateCity}
                 onClose={onClose}
