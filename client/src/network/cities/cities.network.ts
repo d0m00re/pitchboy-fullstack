@@ -21,11 +21,17 @@ class CitiesNetworkAdapter {
         return networkGen(`${url}/paginate?limit=${limit}&page=${page}`, "get");
     }
 
-    // delete
+    createOne = (props : entities.ICityEntity) : Promise<entities.ICity | undefined> => {
+        return networkGen(`${url}`, "post", props);
+    }
 
-    // create
+    deleteOne = (_id : string) : Promise<entities.ICity | undefined> => {
+        return networkGen(url, "delete", {id : _id});
+    }
 
-    // notation update
+    updateOne = (props : Partial<entities.ICity>) : Promise<entities.ICity | undefined> => {
+        return networkGen(url, "patch", props);
+    }
 }
 
 export default new CitiesNetworkAdapter();

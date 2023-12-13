@@ -5,11 +5,17 @@ import { citiesNetwork } from "./../../../network/cities";
 import useCities from "./../../../stateManager/cities.state";
 import Pagination from "@mui/material/Pagination";
 import Box from '@mui/material/Box';
+import { Button } from '@mui/material';
+import ModalCreateCity from "./../../templates/ModalCreation/ModalCreateCity";
 
 type Props = {}
 
 function Home({ }: Props) {
     const citiesStore = useCities();
+    const [openModalCreateCity, setOpenModalCreateCity] = useState<boolean>(false);
+    const onOpen = () => setOpenModalCreateCity(true);
+    const onClose = () => setOpenModalCreateCity(false);
+
 
     useEffect(() => {
         populate(0, 6)
@@ -29,12 +35,19 @@ function Home({ }: Props) {
 
     return (
         <Box sx={{ display: 'flex', alignContent : "center", flexDirection : "column", margin : "18px", gap : "10px" }}>
+            <Button onClick={onOpen}>Create a project</Button>
+            <ModalCreateCity
+                open={openModalCreateCity}
+                onClose={onClose}
+                pushNewProject={citiesStore.pushOne}
+            />
+            
             <ListCities
                 listCities={citiesStore.cities.rows}
             />
             <Pagination
                 style={{margin : "auto"}}
-                count={citiesStore.cities.info.totalPage}
+                count={citiesStore.cities.info.totalPage + 1}
                 color="primary"
                 onChange={(event: any, currentPage: number) => populate(
                     currentPage - 1,
