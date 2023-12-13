@@ -1,11 +1,9 @@
 import { Request, Response, NextFunction } from 'express';
 
-// Your custom "middleware" function:
 function hocExpressParamsQuery(validationSchema: any) {
   return function expressParamsQuery(req: Request, res: Response, next: NextFunction): void {
-    console.log("express params query");
     try {
-      let params = { ...req.query, ...req.params };
+      const params = { ...req.query, ...req.params };
       validationSchema.parse(params);
       next();
     }

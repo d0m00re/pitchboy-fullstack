@@ -4,7 +4,7 @@ import ListMovie from '../../molecules/ListMovie';
 type Props = {}
 
 const fetchData = (page : number) => {
-    let list : entitiesMoovie.IMoovieElem[] = [{
+    const list : entitiesMoovie.IMoovieElem[] = [{
         name : "matrix",
         desc : "nice one",
         imgUrl : "..."

@@ -20,30 +20,17 @@ class DbCities {
     }
 
     findCityWithPostalCode(postalCode : string) {
-        let i = this.cities.findIndex(city => city.fields.code_postal === postalCode);
+        const i = this.cities.findIndex(city => city.fields.code_postal === postalCode);
         return (i === -1) ? undefined : this.cities[i];
     }
 
     findCitiesWithCommuneCode(communeCode : string) {
-        let listCities = this.cities.filter(city => city.fields.code_commune_insee === communeCode);
+        const listCities = this.cities.filter(city => city.fields.code_commune_insee === communeCode);
         return (listCities === undefined) ? undefined : listCities;
     }
 
-    
-    findNearCity(props : entityCities.INearCity) {
-        let p1 = {lat : props.p1[0], lng : props.p1[1]};
-        let allCity = this.cities.filter(city => calculDistance(
-            p1,
-            {
-                lat : city.geometry.coordinates[0],
-                lng : city.geometry.coordinates[1]
-            }) < props.maxDistance);
-
-        return allCity;
-    }
-
     patchOne(city : Partial<entityCities.ICity>) {
-        let index = this.cities.findIndex(_city => _city.recordid === city.recordid);
+        const index = this.cities.findIndex(_city => _city.recordid === city.recordid);
 
         if (index === -1) return undefined;
 

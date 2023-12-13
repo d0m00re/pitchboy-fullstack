@@ -23,6 +23,16 @@ export const ZodCity = z.object({
     record_timestamp : z.string()
 });
 
+export const ZodCityPatchInput = z.object({
+    datasetid : z.string().optional(),
+    recordid : z.string().min(1),
+    fields : ZodCityField.optional(),
+    geometry : ZodGeometry.optional(),
+    record_timestamp : z.string().optional()
+});
+
+export type ICityPatchInput = z.infer<typeof ZodCityPatchInput>;
+
 export const ZodCities = z.array(ZodCity);
 
 export type ICoordinate = z.infer<typeof ZodCoordinate>;
@@ -44,8 +54,8 @@ export type IPaginateString = z.infer<typeof ZodPaginateString>;
 export type IPaginate = z.infer<typeof ZodPaginate>;
 
 export const ZodPaginateInfoOutput = z.object({
-    "page" : z.number(),
-    "limit" : z.number(),
+    "page" : z.number().positive(),
+    "limit" : z.number().positive().min(1),
     "count" : z.number(),
     "totalPage" : z.number()
 })
@@ -57,7 +67,7 @@ export const ZodPaginateOutput = z.object({
 
 export const ZodNearCity = z.object({
     p1 : ZodCoordinate,
-    maxDistance : z.number()
+    maxDistance : z.number().positive()
 })
 
 export type INearCity = z.infer<typeof ZodNearCity>;
