@@ -7,7 +7,7 @@ import findNearCity from "./findNearCity.controller";
 import citiesPagination from "./citiesPagination.controller";
 
 import patchOne from "./patchOne.controller";
-
+import createOne from "./createOne.controller";
 export {
     getAll,
     deleteWtId,
@@ -15,5 +15,6 @@ export {
     getWtPostalCode,
     findNearCity,
     citiesPagination,
-    patchOne
+    patchOne,
+    createOne
 }

@@ -80,7 +80,21 @@ router.patch("/",
         catch (err) {
             return res.status(500).send({ msg: "internal error" });
         }
-    });
+});
+
+router.post("/",
+    mdw.hocExpressBody(entityCities.ZodCityEntity),
+    (req : Request<{}, {}, entityCities.ICityEntity>, res : Response) => {
+        try {
+            const body = req.body;
+            const newCity = citiesController.createOne(body);
+
+            if (!newCity)  return res.status(404).send({ msg: "not found" });
+            res.status(201).send(newCity);
+        } catch(err) {
+            return res.status(500).send({msg : "internal error"})
+        }
+    })
 
 
 // get all cities - bad routes with lot of cities

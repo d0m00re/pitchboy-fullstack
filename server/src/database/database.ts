@@ -1,7 +1,6 @@
 import dataJSON from "./data.json";
 import * as entityCities from "./entity.type";
 import { v4 as uuidv4 } from 'uuid';
-import calculDistance from "./../utils/calculDistance"
 
 class DbCities {
     cities : entityCities.ICity[];
@@ -38,6 +37,30 @@ class DbCities {
         this.cities[index] = {...this.cities[index], ...city};
         this.cities[index].record_timestamp = (new Date()).getUTCMilliseconds() + ""
         return this.cities[index];
+    }
+
+    createOne(cityEntity : entityCities.ICityEntity) {
+        const encodeCity : entityCities.ICity = {
+            ...cityEntity,
+            recordid : uuidv4(),
+            record_timestamp : new Date() + ""
+        }
+
+        // check unique postal code
+        if (this.findCityWithPostalCode(encodeCity.fields.code_postal))
+            return undefined;
+
+        // unique constraint check - this case never happen normaly
+        let maxTry = 10;
+        while (maxTry && this.cities.findIndex(city => city.recordid === encodeCity.recordid) !== -1) {
+            encodeCity.recordid = uuidv4();
+            maxTry -= 1;
+        }
+        if (!maxTry) return undefined;
+
+        this.cities.push(encodeCity);
+
+        return encodeCity;
     }
 
     paginate(props : entityCities.IPaginate) {

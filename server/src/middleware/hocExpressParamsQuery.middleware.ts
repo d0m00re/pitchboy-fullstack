@@ -4,7 +4,7 @@ function hocExpressParamsQuery(validationSchema: any) {
   return function expressParamsQuery(req: Request, res: Response, next: NextFunction): void {
     try {
       const params = { ...req.query, ...req.params };
-      validationSchema.parse(params);
+      validationSchema.strict().parse(params);
       next();
     }
     catch (err) {

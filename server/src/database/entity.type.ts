@@ -15,6 +15,12 @@ export const ZodGeometry = z.object({
     coordinates : ZodCoordinate
 })
 
+export const ZodCityEntity = z.object({
+    datasetid : z.string(),
+    fields : ZodCityField,
+    geometry : ZodGeometry,
+});
+
 export const ZodCity = z.object({
     datasetid : z.string(),
     recordid : z.string(),
@@ -22,6 +28,8 @@ export const ZodCity = z.object({
     geometry : ZodGeometry,
     record_timestamp : z.string()
 });
+
+
 
 export const ZodCityPatchInput = z.object({
     datasetid : z.string().optional(),
@@ -38,6 +46,7 @@ export const ZodCities = z.array(ZodCity);
 export type ICoordinate = z.infer<typeof ZodCoordinate>;
 export type ICityField = z.infer<typeof ZodCityField>;
 export type IGeometry = z.infer<typeof ZodGeometry>;
+export type ICityEntity = z.infer<typeof ZodCityEntity>;
 export type ICity = z.infer<typeof ZodCity>;
 export type ICities = z.infer<typeof ZodCities>;
 
