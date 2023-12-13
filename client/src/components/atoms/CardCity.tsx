@@ -5,14 +5,14 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import Card from "@mui/material/Card";
 import CardContent from '@mui/material/CardContent';
 import Notation from "./Notation";
-import * as entitiesMovie from "../entity/movie.entity";//"./../../entity/moovie.entity";
+import * as entitiesCities from "../../network/cities/cities.entities";//"./../../entity/moovie.entity";
 
 
 type Props = {
-    movie: entitiesMovie.IMoovieElem
+    city: entitiesCities.ICity
 }
 
-function Movie(props: Props) {
+function CardCity(props: Props) {
     const [notation, setNotation] = useState(0);
 
     return (
@@ -24,24 +24,24 @@ function Movie(props: Props) {
                     <DeleteIcon />
                 </IconButton>
                 <Typography variant="h5" component="h2">
-                    {props.movie.name}
+                    {props.city.datasetid}
                 </Typography>
 
                 <Notation
-                    id={props.movie.name}
+                    id={"useless"}
                     notation={notation}
                     updateNotation={(id, rating) => setNotation(rating)}
                 />
 
                 <Typography variant="body2" component="p">
-                    {props.movie.desc}
+                    {props.city.fields.libelle_d_acheminement}
                 </Typography>
                 <Typography variant="caption" color="textSecondary">
-                    created on : 2024
+                    created on : {props.city.record_timestamp}
                 </Typography>
             </CardContent>
         </Card>
     )
 }
 
-export default Movie
+export default CardCity;

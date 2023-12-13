@@ -1,45 +1,36 @@
 import React, {useEffect, useState} from 'react';
-import * as entitiesMoovie from "../../entity/movie.entity";
-import ListMovie from '../../molecules/ListMovie';
-import {moovieNetwork} from "./../../../network/moovie";
+import * as entitiesCities from "../../../network/cities/cities.entities";
+import ListCities from '../../molecules/ListCities';
+import {citiesNetwork} from "./../../../network/cities";
+import useCities from "./../../../stateManager/cities.state";
 type Props = {}
 
-const fetchData = (page : number) => {
-    const list : entitiesMoovie.IMoovieElem[] = [{
-        name : "matrix",
-        desc : "nice one",
-        imgUrl : "..."
-    }, {
-        name : "matrix 2",
-        desc : "nice one",
-        imgUrl : "..."
-    },{
-        name : "matrix 3",
-        desc : "nice one",
-        imgUrl : "..."
-    }];
-
-    return list;
-};
-
 function Home({}: Props) {
-const [listMoovie, setListMoovie] = useState<entitiesMoovie.IListMoovie>(entitiesMoovie.makeEmpty());
+    const citiesStore = useCities();
 
     useEffect(() => {
-      setListMoovie(old => ({...old, moovies : fetchData(0)}));
-      moovieNetwork.hello();
+     // setListMoovie(old => ({...old, moovies : fetchData(0)}));
+      //citiesNetwork.hello();
 
-      moovieNetwork.getAll()
-      .then(resp => console.log(resp))
-      .catch(err => console.log(err))
-    }, [])
+      populate(0, 10)
+    }, []);
+
+    function populate(page : number, limit : number) {
+        return citiesNetwork.paginate(page + "", limit + "")
+        .then(resp => {
+            if (resp)
+                citiesStore.setData(resp);
+        })
+        .catch(() => {
+            console.log("error")
+        }) 
+     }
     
 
   return (
     <section>
-        <ListMovie
-            listMovies={listMoovie.moovies}
-            currentSelect={listMoovie.page}
+        <ListCities
+            listCities={citiesStore.cities.rows}
         />
     </section>
   )
