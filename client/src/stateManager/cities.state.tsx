@@ -21,7 +21,10 @@ const makeEmpty = (): entitiesCities.IPaginateOutput => ({
 const useStoreCities = create<ICitiesStore>((set) => ({
     cities: makeEmpty(),
     setData: (citiesPaginate: entitiesCities.IPaginateOutput) => {
-        set((state) => ({ cities: citiesPaginate }))
+        set((state) => {
+            //state.cities = citiesPaginate;
+            return ({ cities: citiesPaginate })
+        })
     },
     pushOne: (city: entitiesCities.ICity) => {
         set((state) => {

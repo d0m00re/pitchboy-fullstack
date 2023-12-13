@@ -22,7 +22,7 @@ function ListCities(props: Props) {
               md={4}
               alignItems={"center"}
               justifyContent={"center"}
-              key={`city-card-${city.datasetid}`}
+              key={`city-card-${city.recordid}`}
             >
               <CardCity
                 city={city}
