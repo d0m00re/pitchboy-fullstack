@@ -23,6 +23,8 @@ const useStoreCities = create<ICitiesStore>((set) => ({
     setData: (citiesPaginate: entitiesCities.IPaginateOutput) => {
         set((state) => {
             //state.cities = citiesPaginate;
+            console.log("cities paginate : ")
+            console.log(citiesPaginate)
             return ({ cities: citiesPaginate })
         })
     },
@@ -45,12 +47,6 @@ const useStoreCities = create<ICitiesStore>((set) => ({
             }
         }))
     }
-
-    /*
-    updateOne: (city: entitiesCities.ICity) => {
-
-    }
-    */
 }))
 
 export default useStoreCities;

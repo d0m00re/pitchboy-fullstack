@@ -18,12 +18,11 @@ function CardCity(props: Props) {
     const [notation, setNotation] = useState(0);
 
     return (
-        <Card sx={{ minWidth: 275, maxWidth: 300 }}>
+        <Card sx={{ minWidth: 275, maxWidth: 300, ":hover" : {boxShadow: 18} }}>
             <CardContent>
                 <div style={{
                     display:"flex",
                     flexDirection:"column"
-                    
                 }}>
                 
                 <IconButton
@@ -42,10 +41,10 @@ function CardCity(props: Props) {
                 />
 
                 <Typography variant="body2" component="p" align="center">
-                    Postal code : {props.city.fields.code_postal}
+                    Code postal : {props.city.fields.code_postal}
                 </Typography>
                 <Typography variant="caption" color="textSecondary" align="center">
-                    created on : {props.city.record_timestamp}
+                    Date de creation : {props.city.record_timestamp}
                 </Typography>
                 </div>
             </CardContent>
