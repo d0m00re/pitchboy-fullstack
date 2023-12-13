@@ -4,6 +4,7 @@ import ListCities from '../../molecules/ListCities';
 import { citiesNetwork } from "./../../../network/cities";
 import useCities from "./../../../stateManager/cities.state";
 import Pagination from "@mui/material/Pagination";
+import Box from '@mui/material/Box';
 
 type Props = {}
 
@@ -27,11 +28,12 @@ function Home({ }: Props) {
 
 
     return (
-        <section>
+        <Box sx={{ display: 'flex', alignContent : "center", flexDirection : "column", margin : "18px", gap : "10px" }}>
             <ListCities
                 listCities={citiesStore.cities.rows}
             />
             <Pagination
+                style={{margin : "auto"}}
                 count={citiesStore.cities.info.totalPage}
                 color="primary"
                 onChange={(event: any, currentPage: number) => populate(
@@ -39,7 +41,7 @@ function Home({ }: Props) {
                     citiesStore.cities.info.limit
                 )}
             />
-        </section>
+        </Box>
     )
 }
 

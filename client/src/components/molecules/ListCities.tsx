@@ -1,22 +1,35 @@
 import React from 'react'
 import CardCity from "../atoms/CardCity";
 import * as entitiesCities from "../../network/cities/cities.entities";//"./../../entity/moovie.entity";
+import Grid from "@mui/material/Grid";
+import Container from "@mui/material/Container";
 
 type Props = {
-    listCities : entitiesCities.ICities,
-    currentSelect : number;
+  listCities: entitiesCities.ICities,
 }
 
 function ListCities(props: Props) {
   return (
-    <div>
+    <Container>
+      <Grid container spacing={2} alignItems={"center"}>
         {
-            props.listCities.map(city => <CardCity
-                key={`city-${city.datasetid}`}
-                city={city}    
-            />)
+          props.listCities.map(city =>
+            <Grid
+              item
+              xs={12}
+              sm={6}
+              md={4}
+              alignItems={"center"}
+              justifyContent={"center"}
+              key={`city-card-${city.datasetid}`}
+            >
+              <CardCity
+                city={city}
+              />
+            </Grid>)
         }
-    </div>
+      </Grid>
+    </Container>
   )
 }
 
